@@ -1,0 +1,13 @@
+channel_info:
+- protein 1
+- protein 2
+- protein 3
+- nucleus
+main:
+  file_extension: .ims
+  folder_to_search: D:/02_data_from_others/Viola
+  re_analyse_images: true
+  search_subfolders: false
+processed_files:
+- D:/02_data_from_others/Viola\230705_mNG-DFCP1_LT_LC3_LPDS_chol_2h_1.ims
+- D:/02_data_from_others/Viola\230705_mNG-DFCP1_LT_LC3_LPDS_chol_2h_2.ims
