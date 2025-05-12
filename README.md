@@ -12,6 +12,53 @@ Please ensure that you include this information in your request:
 3.	A link to some example files (not the entire dataset if large):
 4.	A detailed description of your problem and what you need assistance with:
 5.	Should the generated code be available for the public?: (Yes/ No/ Only after yyyy.mm.dd/publication/etc)
+6. Would you like to join a mailing list where I send out occational updates about code that is avalable for everyone.
+
+## NEW / in progress !!!
+### Workflow manager. [run_pipeline.exe](https://github.com/bioimagehub/run_pipeline)
+Check out my new program that can execute all your other scripts sequentially while keeping a record of what processing steps have been done.
+The aim of this is to move towards automated image analysis and the idea is that you have a folder of images going into the pipeline and an results table / plots coming out in the other end. 
+If this is interesting to you please contact me or try it out!
+
+You can write your own programs, use programs developed by others, or use code from the [standard_code](https://github.com/bioimagehub/run_pipeline/tree/main/standard_code).
+Currently I have tested this on:
+* Cellpose
+* All the programs in [standard_code](https://github.com/bioimagehub/run_pipeline/tree/main/standard_code)
+But in essence if you can run your program from a windows terminal it should work.
+
+In brief:
+You need to have python (miniconda or anaconda installed)
+You need to have the python environments that you need to run your code [example python environments](https://github.com/bioimagehub/run_pipeline/tree/main/conda_envs)
+You need to make a config file: or use one of these [example workflow files](https://github.com/bioimagehub/run_pipeline/tree/main/pipeline_configs)
+The yaml file should look something like this:
+```yaml
+run:
+- name: Collapse folder structure and save as .tif # A name that describes this part of the code
+  environment: drift # name of the python environment you want to call
+  commands: # This is a list of commands that you want to execute
+  - python
+  - ./standard_code/convert_to_tif.py " # You can add the full path to your 
+  - --input_folder: ./input
+  - --extension: .ims
+  - --search_subfolders
+  - --collapse_delimiter: __
+  - --projection_method: sum
+- name: run find nuclei with threshold # Once the first run comand has been executed this will run.
+  environment: segment
+  commands:
+  - python
+  - ./standard_code/segment_threshold.py
+  - --input_folder: ./input_tif
+  - --output_folder: ./output_nuc_mask
+  - --channels: 3
+  - --median_filter_size: 15
+  - --method: li
+  - --min_size: 10000
+  - --max_size: 55000
+  - --watershed_large_labels
+  - --remove_xy_edges
+```
+
 
 
 
