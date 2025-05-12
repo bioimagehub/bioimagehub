@@ -65,7 +65,9 @@ run:
 
 
 
-- **Email:** [biphub-contact@medisin.uio.no](mailto:biphub-contact@medisin.uio.no)
+- **Email:** [biphub-contact@medisin.uio.no](mailto:biphub-contact@medisin.uio.no) To open a request for code
+- **Email 2** [bioimagehub@gmail.com](bioimagehub@gmail.com) To ask to join the email list
+- 
 
 Øyvind Ødegård Fougner
 Bioimage Processing Hub (BIPHUB)
