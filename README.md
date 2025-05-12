@@ -62,8 +62,10 @@ run:
   - --remove_xy_edges
 ```
 
-
-
+### Convert to OME-TIF
+I have made a script that can convert many file formats (all that can be opened with bioformats) to OME-TIF.
+This script can also directly perform a xy drift correction in time, and collapse complex folder structures, It also extracts some basic info like physical pixel size but this will expand in the future.
+Check out [convert to tif](https://github.com/bioimagehub/run_pipeline/blob/main/standard_code/convert_to_tif.md) 
 
 - **Email:** [biphub-contact@medisin.uio.no](mailto:biphub-contact@medisin.uio.no) To open a request for code
 - **Email 2** [bioimagehub@gmail.com](bioimagehub@gmail.com) To ask to join the email list
