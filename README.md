@@ -15,7 +15,7 @@ Please ensure that you include this information in your request:
 6. Would you like to join a mailing list where I send out occational updates about code that is avalable for everyone.
 
 ### Bioimage-processing-hub email list
-If you wish to recieve occational emails about what I am currently working on/releasing you can email me at bioimagehub@gmail.com and I will add you to my email list. Please include you Name, Group leader name, and which imaging node you belong to (Montebello Node, Blindern Node, IMB node, or Gaustad node). 
+If you wish to recieve occational emails about what I am currently working on/releasing you can email me at bioimagehub@gmail.com and I will add you to my email list. Please include `your Name`, `Group leader name`, and which `imaging node` you belong to (Montebello Node, Blindern Node, IMB node, or Gaustad node). 
 
 ## NEW / in progress !!!
 ### Workflow manager. [run_pipeline.exe](https://github.com/bioimagehub/run_pipeline)
